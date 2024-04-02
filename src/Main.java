@@ -10,22 +10,22 @@ public class Main {
 }
     public static String calc (String input){
         String[] elements = new String[3];
-        if(input.indexOf("+") != -1){
+        if(input.indexOf(" + ") != -1){
             elements[0] = input.substring(0, input.lastIndexOf("+"));
             elements[1] = input.substring(input.indexOf("+"), input.lastIndexOf("+")+1);
             elements[2] = input.substring(input.lastIndexOf("+")+1);
         }else {
-            if(input.indexOf("-") != -1){
+            if(input.indexOf(" - ") != -1){
                 elements[0] = input.substring(0, input.lastIndexOf("-"));
-                elements[1] = input.substring(input.indexOf("-"), input.lastIndexOf("-")+1);
+                elements[1] = input.substring(input.indexOf("- "), input.lastIndexOf("-")+1);
                 elements[2] = input.substring(input.lastIndexOf("-")+1);
             }else {
-                if(input.indexOf("*") != -1){
+                if(input.indexOf(" * ") != -1){
                     elements[0] = input.substring(0, input.lastIndexOf("*"));
                     elements[1] = input.substring(input.indexOf("*"), input.lastIndexOf("*")+1);
                     elements[2] = input.substring(input.lastIndexOf("*")+1).trim();
                 }else {
-                    if(input.indexOf("/") != -1){
+                    if(input.indexOf(" / ") != -1){
                         elements[0] = input.substring(0, input.lastIndexOf("/"));
                         elements[1] = input.substring(input.indexOf("/"), input.lastIndexOf("/")+1);
                         elements[2] = input.substring(input.lastIndexOf("/")+1).trim();
